@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.2.7 MFRC522 RFID-Modul &mdash; SunFounder Da Vinci Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="3 Erweiterung" href="3_extension.html" />
+    <link rel="prev" title="2.2.6 MPU6050-Modul" href="2.2.6_mpu6050_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Da Vinci Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="component_list.html">Komponentenliste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_do_we_need.html">Was brauchen wir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">Vorbereitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliotheken</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpio_extension_board.html">GPIO-Erweiterungskarte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_the_code.html">Laden Sie die Kode herunter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Ausgabe</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="2_input.html">2 Eingabe</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1.1_button.html">2.1.1 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.2_slide%20Switch.html">2.1.2 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.3_tilt_switch.html">2.1.3 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.4_potentiometer.html">2.1.4 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.5_keypad.html">2.1.5 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.6_joystick.html">2.1.6 Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.1_photoresistor.html">2.2.1 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.2_thermistor.html">2.2.2 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.3_dht-11.html">2.2.3 DHT-11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.4_pir.html">2.2.4 PIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.5_ultrasonic_sensor_module.html">2.2.5 Ultraschallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.6_mpu6050_module.html">2.2.6 MPU6050-Modul</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2.7 MFRC522 RFID-Modul</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Komponenten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#principle">Prinzip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram">Schematische Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-procedures">Experimentelle Verfahren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#for-c-language-users">Für Benutzer in C-Sprache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for-python-language-users">Für Python-Sprachbenutzer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture">Phänomen Bild</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Erweiterung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Da Vinci Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="2_input.html">2 Eingabe</a> &raquo;</li>
+        
+      <li>2.2.7 MFRC522 RFID-Modul</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.2.7_mfrc522_rfid_module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="mfrc522-rfid-module">
+<h1>2.2.7 MFRC522 RFID-Modul<a class="headerlink" href="#mfrc522-rfid-module" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="introduction">
+<h2>Einführung<a class="headerlink" href="#introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Radio Frequency Identification (RFID) bezieht sich auf Technologien, die die drahtlose Kommunikation zwischen einem Objekt (oder Tag) und einem Abfragegerät (oder Lesegerät) verwenden, um solche Objekte automatisch zu verfolgen und zu identifizieren.</p>
+<p>Einige der häufigsten Anwendungen für diese Technologie sind Lieferketten für den Einzelhandel, militärische Lieferketten, automatisierte Zahlungsmethoden, Gepäckverfolgung und -verwaltung, Dokumentenverfolgung und pharmazeutische Verwaltung, um nur einige zu nennen.</p>
+<p>In diesem Projekt werden wir RFID zum Lesen und Schreiben verwenden.</p>
+</section>
+<section id="components">
+<h2>Komponenten<a class="headerlink" href="#components" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/list_2.2.7.png" src="_images/list_2.2.7.png" />
+</section>
+<section id="principle">
+<h2>Prinzip<a class="headerlink" href="#principle" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>RFID</strong></p>
+<p>Radio Frequency Identification (RFID) bezieht sich auf Technologien, bei denen eine drahtlose Kommunikation zwischen einem Objekt (oder Tag) und einem Abfragegerät (oder Lesegerät) verwendet wird, um solche Objekte automatisch zu verfolgen und zu identifizieren. Die Tag-Übertragungsreichweite ist auf mehrere Meter vom Lesegerät begrenzt. Eine klare Sichtlinie zwischen Lesegerät und Etikett ist nicht unbedingt erforderlich.</p>
+<p>Die meisten Etikette enthalten mindestens eine integrierte Schaltung (IC) und eine Antenne. Der Mikrochip speichert Informationen und ist für die Verwaltung der Hochfrequenzkommunikation mit dem Lesegerät verantwortlich. Passive Etiketts haben keine unabhängige Energiequelle und sind auf ein externes elektromagnetisches Signal angewiesen, das vom Lesegerät bereitgestellt wird, um ihren Betrieb zu betreiben. Aktive Etiketts enthalten eine unabhängige Energiequelle, z. B. eine Batterie. Dann können sie eine erhöhte Verarbeitung, Übertragungsfähigkeit und Reichweite aufweisen.</p>
+<img alt="_images/image230.png" src="_images/image230.png" />
+<p><strong>MFRC522</strong></p>
+<p>MFRC522 ist eine Art integrierter Lese- und Schreibkartenchip. Es wird üblicherweise im Radio bei 13,56 MHz verwendet. Es wurde von der NXP Company eingeführt und ist ein berührungsloser, kostengünstiger und kleiner Niederspannungs-Kartenchip, der die beste Wahl für intelligente Instrumente und tragbare Handheld-Geräte darstellt.</p>
+<p>Der MF RC522 verwendet ein fortschrittliches Modulations- und Demodulationskonzept, das in allen Arten von passiven kontaktlosen Kommunikationsmethoden und -protokollen mit 13,56 MHz vollständig dargestellt wird. Darüber hinaus unterstützt es den schnellen CRYPTO1-Verschlüsselungsalgorithmus zur Überprüfung von MIFARE-Produkten. Der MFRC522 unterstützt auch die berührungslose Hochgeschwindigkeitskommunikation der MIFARE-Serie mit einer bidirektionalen Datenübertragungsrate von bis zu 424 kbit / s. Als neues Mitglied der hochintegrierten 13,56-MHz-Lesekartenserie ist der MF RC522 dem vorhandenen MF RC500 und MF RC530 sehr ähnlich, es gibt jedoch auch große Unterschiede. Es kommuniziert mit dem Host-Computer über die serielle Art und Weise, die weniger Verkabelung erfordert. Sie können zwischen SPI-, I2C- und seriellem UART-Modus (ähnlich wie RS232) wählen, um die Verbindung zu reduzieren, Platz auf der Leiterplatte zu sparen (kleinere Größe) und Kosten zu senken.</p>
+</section>
+<section id="schematic-diagram">
+<h2>Schematische Darstellung<a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image331.png" src="_images/image331.png" />
+</section>
+<section id="experimental-procedures">
+<h2>Experimentelle Verfahren<a class="headerlink" href="#experimental-procedures" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Schritt 1:</strong> Bauen Sie die Schaltung auf.</p>
+<img alt="_images/image232.png" src="_images/image232.png" />
+<p><strong>Schritt 2:</strong> Richten Sie SPI ein (weitere Informationen finden Sie im Anhang. Wenn Sie SPI eingestellt haben, überspringen Sie diesen Schritt.)</p>
+<section id="for-c-language-users">
+<h3>Für Benutzer in C-Sprache<a class="headerlink" href="#for-c-language-users" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>Schritt 3:</strong> Gehen Sie zum Ordner der Kode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">davinci</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Schritt 4:</strong> Kompilieren Sie die Kode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">read</span>
+<span class="n">make</span> <span class="n">write</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Es gibt zwei Beispiele, mit denen Sie die Karten-ID lesen oder schreiben können. Sie können je nach Bedarf eines davon auswählen.</p>
+</div>
+<p><strong>Schritt 5:</strong> Führen Sie die ausführbare Datei aus.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">read</span>
+<span class="n">sudo</span> <span class="o">./</span><span class="n">write</span>
+</pre></div>
+</div>
+<p><strong>Kode Erklärung</strong></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">InitRc522</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Mit dieser Funktion wird das RFID RC522-Modul initialisiert.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span> <span class="nf">read_card_data</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Diese Funktion wird zum Lesen der Daten der Karte verwendet. Wenn der Lesevorgang erfolgreich ist, wird „1“ zurückgegeben.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span> <span class="nf">write_card_data</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">data</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Diese Funktion wird zum Schreiben der Kartendaten verwendet und gibt „1“ zurück, wenn der Schreibvorgang erfolgreich ist. * Daten sind die Informationen, die auf die Karte geschrieben werden.</p>
+</section>
+<section id="for-python-language-users">
+<h3>Für Python-Sprachbenutzer<a class="headerlink" href="#for-python-language-users" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>Schritt 3:</strong> Gehen Sie zum Ordner der Kode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">davinci</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Schritt 4:</strong> Führen Sie die ausführbare Datei aus.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python3</span> <span class="mf">2.2</span><span class="o">.</span><span class="mi">7</span><span class="n">_read</span><span class="o">.</span><span class="n">py</span>
+<span class="n">sudo</span> <span class="n">python3</span> <span class="mf">2.2</span><span class="o">.</span><span class="mi">7</span><span class="n">_write</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Es gibt zwei Beispiele, mit denen Sie die Karten-ID lesen oder schreiben können. Sie können je nach Bedarf eines davon auswählen.</p>
+</div>
+<p><strong>Kode Erklärung</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RC522</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Instanziieren Sie die rc522-Klasse.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RC522</span><span class="o">.</span><span class="n">Pcd_start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>RFID initialisieren</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RC522</span><span class="o">.</span><span class="n">read_card_data</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Mit dieser Funktion werden die Kartendaten gelesen. Wenn das Lesen erfolgreich ist, wird „1“ zurückgegeben. addr ist die Adresse der Karte.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RC522</span><span class="o">.</span><span class="n">write_card_data</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Diese Funktion wird zum Schreiben von Kartendaten verwendet. Wenn der Schreibvorgang erfolgreich ist, wird „1“ zurückgegeben. addr ist die Adresse der Karte und data sind die Informationen, die auf die Karte geschrieben werden sollen.</p>
+</section>
+</section>
+<section id="phenomenon-picture">
+<h2>Phänomen Bild<a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image233.jpeg" src="_images/image233.jpeg" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="3_extension.html" class="btn btn-neutral float-right" title="3 Erweiterung" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.2.6_mpu6050_module.html" class="btn btn-neutral float-left" title="2.2.6 MPU6050-Modul" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, sunfounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

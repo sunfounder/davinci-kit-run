@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, SunFounder
+# This file is distributed under the same license as the SunFounder Davinci
+# Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Davinci Kit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-20 18:20+0800\n"
+"PO-Revision-Date: 2021-05-28 14:48+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: ../preparation.rst:2
+msgid "Preparation"
+msgstr "準備"
+
+#: ../preparation.rst:4
+msgid ""
+"In this chapter, we firstly learn to start up Raspberry Pi. The content "
+"includes installing the OS, Raspberry Pi network and how to open "
+"terminal."
+msgstr ""
+"この章では、まずラズベリーパイの起動方法を学びます。内容には、オペレー"
+"ティングシステム、ラズベリーパイネットワークをインストールする方法とター"
+"ミナルの開き方が含まれます。"
+
+#: ../preparation.rst:8
+msgid "You can check the complete tutorial on the official website of"
+msgstr "完全なチュートリアルは、ラズベリーパイの公式サイト"
+
+#: ../preparation.rst:9
+msgid ""
+"the Raspberry Pi: `raspberry-pi-setting-up <https://projects.raspberrypi."
+"org/en/projects/raspberry-pi-setting-up>`_. * If your Raspberry Pi is "
+"set up, you can skip the part and go into the next chapter."
+msgstr ""
+"the Raspberry Pi: `raspberry-pi-setting-up <https://projects.raspberrypi."
+"org/en/projects/raspberry-pi-setting-up>`_. *で確認できます。ラズベリーパ"
+"イがセットアップされている場合は、この部分をスキップして次の章に進むこと"
+"ができます。"

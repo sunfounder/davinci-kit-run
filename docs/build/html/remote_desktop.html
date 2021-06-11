@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Remotedesktop &mdash; SunFounder Da Vinci Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="prev" title="SPI-Konfiguration" href="spi_configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Da Vinci Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="component_list.html">Komponentenliste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_do_we_need.html">Was brauchen wir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">Vorbereitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliotheken</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpio_extension_board.html">GPIO-Erweiterungskarte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_the_code.html">Laden Sie die Kode herunter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Ausgabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_input.html">2 Eingabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Erweiterung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">Anhang</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="i2c_configuration.html">3.2.1 I2C-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spi_configuration.html">SPI-Konfiguration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Remotedesktop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vnc">VNC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xrdp">XRDP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Da Vinci Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="appendix.html">Anhang</a> &raquo;</li>
+        
+      <li>Remotedesktop</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/remote_desktop.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="remote-desktop">
+<h1>Remotedesktop<a class="headerlink" href="#remote-desktop" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Es gibt zwei Möglichkeiten, den Desktop des Raspberry Pi fernzusteuern: mit <strong>VNC</strong> und <strong>XRDP</strong>.</p>
+<section id="vnc">
+<h2>VNC<a class="headerlink" href="#vnc" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sie können die Funktion des Remotedesktops über VNC verwenden.</p>
+<p><strong>Aktivieren Sie den VNC-Dienst</strong></p>
+<p>Der VNC-Dienst wurde im System installiert. Mit Default ist VNC deaktiviert. Sie müssen es in der Konfiguration aktivieren.</p>
+<p><strong>Schritt 1</strong></p>
+<p>Geben Sie den folgenden Befehl ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/image287.png"><img alt="IMG_280" src="_images/image287.png" style="width: 6.27153in; height: 2.08125in;" /></a>
+<p><strong>Schritt 2</strong></p>
+<p>Wählen Sie <strong>3</strong> <strong>Schnittstellenoptionen</strong>, indem Sie die Abwärtspfeiltaste auf Ihrer Tastatur drücken und dann die <strong>Eingabetaste</strong> drücken.</p>
+<a class="reference internal image-reference" href="_images/image282.png"><img alt="_images/image282.png" src="_images/image282.png" style="width: 5.96944in; height: 2.48819in;" /></a>
+<p><strong>Schritt 3</strong></p>
+<p><strong>P3 VNC</strong></p>
+<a class="reference internal image-reference" href="_images/image288.png"><img alt="_images/image288.png" src="_images/image288.png" style="width: 6.6875in; height: 2.72917in;" /></a>
+<p><strong>Schritt 4</strong></p>
+<p>Wählen Sie <strong>Ja -&gt; OK -&gt; Fertig</strong> stellen, um die Konfiguration zu beenden.</p>
+<a class="reference internal image-reference" href="_images/image289.png"><img alt="IMG_283" src="_images/image289.png" style="width: 5.03125in; height: 3.34583in;" /></a>
+<p><strong>Melden Sie sich bei VNC an</strong></p>
+<p><strong>Schritt 1</strong></p>
+<p>Sie müssen den <strong>VNC Viewer</strong> auf einem PC installieren. Öffnen Sie die Installation nach Abschluss der Installation.</p>
+<p><strong>Schritt 2</strong></p>
+<p>Wählen Sie dann “<strong>Neue Verbindung</strong>”.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/image290.png"><img alt="IMG_285" src="_images/image290.png" style="width: 3.67708in; height: 1.66667in;" /></a>
+</div></blockquote>
+<p><strong>Schritt 3</strong></p>
+<p>Geben Sie die IP-Adresse des Raspberry Pi und einen beliebigen <strong>Namen</strong> ein.</p>
+<a class="reference internal image-reference" href="_images/image291.png"><img alt="IMG_286" src="_images/image291.png" style="width: 5in; height: 5.61458in;" /></a>
+<p><strong>Schritt 4</strong></p>
+<p>Doppelklicken Sie auf die gerade erstellte <strong>Verbindung</strong>:</p>
+<a class="reference internal image-reference" href="_images/image292.png"><img alt="IMG_287" src="_images/image292.png" style="width: 4.57292in; height: 2.98958in;" /></a>
+<p><strong>Schritt 5</strong></p>
+<p>Geben Sie Benutzername (<strong>pi</strong>) und Passwort ein (<strong>raspberry</strong> mit Default).</p>
+<a class="reference internal image-reference" href="_images/image293.png"><img alt="IMG_288" src="_images/image293.png" style="width: 5.20833in; height: 3.75in;" /></a>
+<p><strong>Schritt 6</strong></p>
+<p>Jetzt können Sie den Desktop des Raspberry Pi sehen:</p>
+<a class="reference internal image-reference" href="_images/image294.png"><img alt="IMG_289" src="_images/image294.png" style="width: 6.39722in; height: 4.32222in;" /></a>
+</section>
+<section id="xrdp">
+<h2>XRDP<a class="headerlink" href="#xrdp" title="Link zu dieser Überschrift">¶</a></h2>
+<p>xrdp bietet eine grafische Anmeldung an Remotecomputern mit RDP (Microsoft Remote Desktop Protocol).</p>
+<p><strong>Installieren Sie XRDP</strong></p>
+<p><strong>Schritt 1</strong></p>
+<p>Melden Sie sich mit SSH bei Raspberry Pi an.</p>
+<p><strong>Schritt 2</strong></p>
+<p>Geben Sie die folgenden Anweisungen ein, um XRDP zu installieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xrdp</span>
+</pre></div>
+</div>
+<p><strong>Schritt 3</strong></p>
+<p>Später beginnt die Installation.</p>
+<p>Geben Sie „Y“ ein und drücken Sie zur Bestätigung die Taste „Enter“.</p>
+<a class="reference internal image-reference" href="_images/image295.png"><img alt="图片1" src="_images/image295.png" style="width: 6.84931in; height: 3.07153in;" /></a>
+<p><strong>Schritt 4</strong></p>
+<p>Wenn Sie die Installation abgeschlossen haben, sollten Sie sich mit Windows-Remotedesktopanwendungen bei Ihrem Raspberry Pi anmelden.</p>
+<p><strong>Melden Sie sich bei XRDP an</strong></p>
+<p><strong>Schritt 1</strong></p>
+<p>Wenn Sie Windows-Benutzer sind, können Sie die mit Windows gelieferte Remotedesktopfunktion verwenden. Wenn Sie Mac-Benutzer sind, können Sie Microsoft Remote Desktop aus dem APP Store herunterladen und verwenden, und es gibt keinen großen Unterschied dazwischen. Das nächste Beispiel ist der Windows-Remotedesktop.</p>
+<p><strong>Schritt 2</strong></p>
+<p>Geben Sie „**mstsc**&quot; in „Ausführen“ (WIN + R) ein, um die Remotedesktopverbindung zu öffnen, und geben Sie die IP-Adresse von Raspberry Pi ein. Klicken Sie dann auf „Verbinden“.</p>
+<a class="reference internal image-reference" href="_images/image296.png"><img alt="IMG_291" src="_images/image296.png" style="width: 6.4875in; height: 2.77847in;" /></a>
+<p><strong>Schritt 3</strong></p>
+<p>Dann erscheint die xrdp-Anmeldeseite. Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein. Danach klicken Sie bitte auf „OK“. Wenn Sie sich zum ersten Mal anmelden, lautet Ihr Benutzername „pi“ und das Passwort „raspberry“.</p>
+<a class="reference internal image-reference" href="_images/image297.png"><img alt="IMG_292" src="_images/image297.png" style="width: 3.65694in; height: 4.49514in;" /></a>
+<p><strong>Schritt 4</strong></p>
+<p>Hier können Sie sich erfolgreich über den Remotedesktop bei RPi anmelden.</p>
+<a class="reference internal image-reference" href="_images/image20.png"><img alt="2019-11-07-090413_1024x600_scrot" src="_images/image20.png" style="width: 6.11944in; height: 3.58611in;" /></a>
+<p><strong>Urheberrechtshinweis</strong></p>
+<p>Alle Inhalte, einschließlich, aber nicht beschränkt auf Texte, Bilder und Kode in diesem Handbuch, sind Eigentum der SunFounder Unternehmen. Sie sollten es nur für persönliche Studien, Nachforschungen, Genüsse oder andere nichtkommerzielle oder gemeinnützige Zwecke gemäß den entsprechenden Bestimmungen und Urheberrechtsgesetzen verwenden, ohne die gesetzlichen Rechte des Autors und der relevanten Rechteinhaber zu verletzen. Für jede Person oder Organisation, die diese ohne Erlaubnis für kommerzielle Zwecke nutzt, behält sich das Unternehmen das Recht vor, rechtliche Schritte einzuleiten.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="spi_configuration.html" class="btn btn-neutral float-left" title="SPI-Konfiguration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, sunfounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

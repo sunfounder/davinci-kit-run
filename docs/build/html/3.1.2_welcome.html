@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.1.2 Willkommen &mdash; SunFounder Da Vinci Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="3.1.3 Alarm umkehren" href="3.1.3_reversing_alarm.html" />
+    <link rel="prev" title="3.1.1 Zählgerät" href="3.1.1_counting_device.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Da Vinci Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="component_list.html">Komponentenliste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_do_we_need.html">Was brauchen wir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">Vorbereitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliotheken</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpio_extension_board.html">GPIO-Erweiterungskarte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_the_code.html">Laden Sie die Kode herunter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Ausgabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_input.html">2 Eingabe</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="3_extension.html">3 Erweiterung</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3.1.1_counting_device.html">3.1.1 Zählgerät</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1.2 Willkommen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Komponenten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram">Schematische Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-procedures">Experimentelle Verfahren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#for-c-language-users"><strong>Für Benutzer in C-Sprache</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for-python-language-users"><strong>Für Python-Sprachbenutzer</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture">Phänomen Bild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.3_reversing_alarm.html">3.1.3 Alarm umkehren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.4_smart_fan.html">3.1.4 Smart Fan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.5_battery_indicator.html">3.1.5 Batterieanzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.6_motion_control.html">3.1.6 Bewegungssteuerung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.7_traffic_light.html">3.1.7 Ampel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.8_overheat_monitor.html">3.1.8 Überhitzungsmonitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.9_password_lock.html">3.1.9 Passwortsperre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.10_alarm_bell.html">3.1.10 Alarmglocke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.11_morse_code_generator.html">3.1.11 Morsekode-Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.12_game_guess_number.html">3.1.12 SPIEL – Nummer Vermutung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.13_game_10_second.html">3.1.13 SPIEL - 10 Sekunden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.14_game_not_not.html">3.1.14 SPIEL - Nicht nicht</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Da Vinci Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="3_extension.html">3 Erweiterung</a> &raquo;</li>
+        
+      <li>3.1.2 Willkommen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/3.1.2_welcome.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="welcome">
+<h1>3.1.2 Willkommen<a class="headerlink" href="#welcome" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="introduction">
+<h2>Einführung<a class="headerlink" href="#introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Projekt werden wir PIR verwenden, um die Bewegung von Fußgängern zu erfassen, und Servos, LED und Summer verwenden, um die Arbeit der Sensortür des Supermarkts zu simulieren. Wenn der Fußgänger innerhalb des Erfassungsbereichs des PIR erscheint, leuchtet die Anzeigelampe, die Tür wird geöffnet und der Summer ertönt die Öffnungsglocke.</p>
+</section>
+<section id="components">
+<h2>Komponenten<a class="headerlink" href="#components" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/list_Welcome.png" class="align-center" src="_images/list_Welcome.png" />
+</section>
+<section id="schematic-diagram">
+<h2>Schematische Darstellung<a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>T-Karte Name</p></td>
+<td><p>physisch</p></td>
+<td><p>wiringPi</p></td>
+<td><p>BCM</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO18</p></td>
+<td><p>Pin 12</p></td>
+<td><p>1</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO17</p></td>
+<td><p>Pin 11</p></td>
+<td><p>0</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO27</p></td>
+<td><p>Pin 13</p></td>
+<td><p>2</p></td>
+<td><p>27</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO22</p></td>
+<td><p>Pin 15</p></td>
+<td><p>3</p></td>
+<td><p>22</p></td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/Schematic_three_one2.png" class="align-center" src="_images/Schematic_three_one2.png" />
+</section>
+<section id="experimental-procedures">
+<h2>Experimentelle Verfahren<a class="headerlink" href="#experimental-procedures" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Schritt 1:</strong> Bauen Sie die Schaltung auf.</p>
+<a class="reference internal image-reference" href="_images/image239.png"><img alt="C:\Users\sunfounder\Desktop\3.1.4_Welcome_bb.png3.1.4_Welcome_bb" class="align-center" src="_images/image239.png" style="width: 400px;" /></a>
+<section id="for-c-language-users">
+<h3><strong>Für Benutzer in C-Sprache</strong><a class="headerlink" href="#for-c-language-users" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>Schritt 2:</strong> Verzeichnis wechseln.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">davinci</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Schritt 3:</strong> Kompilieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span> <span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span><span class="n">_Welcome</span><span class="o">.</span><span class="n">c</span> <span class="o">-</span><span class="n">lwiringPi</span>
+</pre></div>
+</div>
+<p><strong>Schritt 4:</strong> Ausführen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">a</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<p>Wenn der PIR-Sensor nach dem Ausführen der Kode jemanden erkennt, der vorbeikommt, öffnet sich die Tür automatisch (vom Servo simuliert), schaltet die Anzeige ein und spielt die Türklingelmusik ab. Nachdem die Türklingelmusik abgespielt wurde, schließt das System automatisch die Tür und schaltet die Anzeigelampe aus, um auf das nächste Mal zu warten, wenn jemand vorbeikommt.</p>
+<p><strong>Kode Erklärung</strong></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setAngle</span><span class="p">(</span><span class="kt">int</span> <span class="n">pin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">angle</span><span class="p">){</span>    <span class="c1">//Create a funtion to control the angle of the servo.</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">angle</span> <span class="o">&gt;</span> <span class="mi">180</span><span class="p">)</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">180</span><span class="p">;</span>
+    <span class="n">softPwmWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="n">Map</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine Funktion, setAngle, um den Winkel im Servo von 0-180 zu schreiben.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">doorbell</span><span class="p">(){</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="k">sizeof</span><span class="p">(</span><span class="n">song</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">softToneWrite</span><span class="p">(</span><span class="n">BuzPin</span><span class="p">,</span> <span class="n">song</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="n">delay</span><span class="p">(</span><span class="n">beat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">250</span><span class="p">);</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine Funktion, Türklingel, damit der Summer Musik abspielen kann.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">closedoor</span><span class="p">(){</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>   <span class="c1">//led off</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">180</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>  <span class="c1">//make servo rotate from maximum angle to minimum angle</span>
+    <span class="n">setAngle</span><span class="p">(</span><span class="n">servoPin</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine Closedoor-Funktion, um das Schließen der Tür zu simulieren, schalten Sie die LED aus und lassen Sie das Servo von 180 Grad auf 0 Grad drehen.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">opendoor</span><span class="p">(){</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>   <span class="c1">//led on</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">181</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>  <span class="c1">//make servo rotate from minimum angle to maximum angle</span>
+        <span class="n">setAngle</span><span class="p">(</span><span class="n">servoPin</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">doorbell</span><span class="p">();</span>
+    <span class="n">closedoor</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die Funktion opendoor () besteht aus mehreren Teilen: Schalten Sie die Anzeigelampe ein, schalten Sie das Servo ein (simulieren Sie das Öffnen der Tür), spielen Sie die Klingelmusik des Supermarkts und rufen Sie nach dem Abspielen der Musik die Funktion geschlossene Tür () auf.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">wiringPiSetup</span><span class="p">()</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span> <span class="c1">//when initialize wiring failed,print message to screen</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;setup wiringPi failed !&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">softToneCreate</span><span class="p">(</span><span class="n">BuzPin</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;setup softTone failed !&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">......</span>
+</pre></div>
+</div>
+<p>Initialisieren Sie in der Funktion main () die Bibliothek wiringPi und richten Sie softTone ein. Setzen Sie dann ledPin in den Ausgabestatus und pirPin in den Eingabestatus. Wenn der PIR-Sensor jemanden erkennt, der vorbeikommt, wird die Funktion opendoor aufgerufen, um das Öffnen der Tür zu simulieren.</p>
+</section>
+<section id="for-python-language-users">
+<h3><strong>Für Python-Sprachbenutzer</strong><a class="headerlink" href="#for-python-language-users" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>Schritt 2:</strong> Verzeichnis wechseln.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">davinci</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">python</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Schritt 3:</strong> Ausführen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python3</span> <span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span><span class="n">_Welcome</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Wenn der PIR-Sensor nach dem Ausführen der Kode jemanden erkennt, der vorbeikommt, öffnet sich die Tür automatisch (vom Servo simuliert), schaltet die Anzeige ein und spielt die Türklingelmusik ab. Nachdem die Türklingelmusik abgespielt wurde, schließt das System automatisch die Tür und schaltet die Anzeigelampe aus, um auf das nächste Mal zu warten, wenn jemand vorbeikommt.</p>
+<p><strong>Kode Erklärung</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">p</span>
+    <span class="k">global</span> <span class="n">Buzz</span>                        <span class="c1"># Assign a global variable to replace GPIO.PWM</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>       <span class="c1"># Numbers GPIOs by physical location</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>   <span class="c1"># Set ledPin&#39;s mode is output</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">pirPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>    <span class="c1"># Set sensorPin&#39;s mode is input</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">buzPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>    <span class="c1"># Set pins&#39; mode is output</span>
+    <span class="n">Buzz</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">buzPin</span><span class="p">,</span> <span class="mi">440</span><span class="p">)</span>    <span class="c1"># 440 is initial frequency.</span>
+    <span class="n">Buzz</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>                    <span class="c1"># Start Buzzer pin with 50% duty ration</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">servoPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>   <span class="c1"># Set servoPin&#39;s mode is output</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">servoPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>  <span class="c1"># Set servoPin to low</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">servoPin</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>     <span class="c1"># set Frequece to 50Hz</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>                     <span class="c1"># Duty Cycle = 0</span>
+</pre></div>
+</div>
+<p>Diese Anweisungen werden verwendet, um die Pins jeder Komponente zu initialisieren.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setAngle</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>      <span class="c1"># make the servo rotate to specific angle (0-180 degrees)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="n">angle</span><span class="p">))</span>
+    <span class="n">pulse_width</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">SERVO_MIN_PULSE</span><span class="p">,</span> <span class="n">SERVO_MAX_PULSE</span><span class="p">)</span>
+    <span class="n">pwm</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">pulse_width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="n">pwm</span><span class="p">)</span><span class="c1">#map the angle to duty cycle and output it</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine Funktion von servowrite, um den Winkel in das Servo zu schreiben, der 0-180 ist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">doorbell</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">song</span><span class="p">)):</span> <span class="c1"># Play song1</span>
+        <span class="n">Buzz</span><span class="o">.</span><span class="n">ChangeFrequency</span><span class="p">(</span><span class="n">song</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1"># Change the frequency along the song note</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">beat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">)</span> <span class="c1"># delay a note for beat * 0.25s</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine Funktion, Türklingel, damit der Summer Musik abspielen kann.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">closedoor</span><span class="p">():</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
+    <span class="n">Buzz</span><span class="o">.</span><span class="n">ChangeFrequency</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1">#make servo rotate from 180 to 0 deg</span>
+        <span class="n">setAngle</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Schließen Sie die Tür und schalten Sie die Kontrollleuchte aus.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">opendoor</span><span class="p">():</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>   <span class="c1">#make servo rotate from 0 to 180 deg</span>
+        <span class="n">setAngle</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>     <span class="c1"># Write to servo</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+    <span class="n">doorbell</span><span class="p">()</span>
+    <span class="n">closedoor</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Die Funktion opendoor () besteht aus mehreren Teilen: Schalten Sie die Anzeigelampe ein, schalten Sie das Servo ein (um das Öffnen der Tür zu simulieren), spielen Sie die Klingelmusik des Supermarkts und rufen Sie nach dem Spielen die Funktion Closedoor() auf Musik.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">pirPin</span><span class="p">)</span><span class="o">==</span><span class="n">GPIO</span><span class="o">.</span><span class="n">HIGH</span><span class="p">:</span>
+        <span class="n">opendoor</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Wenn RIP erkennt, dass jemand vorbeikommt, ruft es die Funktion opendoor() auf.</p>
+</section>
+</section>
+<section id="phenomenon-picture">
+<h2>Phänomen Bild<a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image240.jpeg" class="align-center" src="_images/image240.jpeg" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="3.1.3_reversing_alarm.html" class="btn btn-neutral float-right" title="3.1.3 Alarm umkehren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3.1.1_counting_device.html" class="btn btn-neutral float-left" title="3.1.1 Zählgerät" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, sunfounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

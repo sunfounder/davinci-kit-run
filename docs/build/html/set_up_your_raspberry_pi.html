@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Richten Sie Ihren Raspberry Pi ein &mdash; SunFounder Da Vinci Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Bibliotheken" href="libraries.html" />
+    <link rel="prev" title="Installieren des Betriebssystems" href="installing_the_os.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Da Vinci Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="component_list.html">Komponentenliste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_do_we_need.html">Was brauchen wir?</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="preparation.html">Vorbereitung</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installing_the_os.html">Installieren des Betriebssystems</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Richten Sie Ihren Raspberry Pi ein</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#if-you-have-a-screen">Wenn Sie einen Bildschirm haben</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-you-have-no-screen">Wenn Sie keinen Bildschirm haben</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-the-ip-address">Die IP-Adresse bekommen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-the-ssh-remote-control">Verwenden Sie die SSH-Fernbedienung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliotheken</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpio_extension_board.html">GPIO-Erweiterungskarte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_the_code.html">Laden Sie die Kode herunter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Ausgabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_input.html">2 Eingabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Erweiterung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Da Vinci Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="preparation.html">Vorbereitung</a> &raquo;</li>
+        
+      <li>Richten Sie Ihren Raspberry Pi ein</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/set_up_your_raspberry_pi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="set-up-your-raspberry-pi">
+<h1>Richten Sie Ihren Raspberry Pi ein<a class="headerlink" href="#set-up-your-raspberry-pi" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="if-you-have-a-screen">
+<h2>Wenn Sie einen Bildschirm haben<a class="headerlink" href="#if-you-have-a-screen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn Sie einen Bildschirm haben, können Sie den Raspberry Pi problemlos bedienen.</p>
+<p><strong>Erforderliche Komponenten</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Jeglicher Raspberry -Pi</p></td>
+<td><p>1 * Netzteil</p></td>
+</tr>
+<tr class="row-even"><td><p>1 * Micro SD Karte</p></td>
+<td><p>1 * Bildschirm Netzteil</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 * HDMI Kabel</p></td>
+<td><p>1 * Bildschirm</p></td>
+</tr>
+<tr class="row-even"><td><p>1 * Maus</p></td>
+<td><p>1 * Tastatur</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>Legen Sie die mit Raspberry Pi OS eingerichtete SD-Karte in den Micro-SD-Kartensteckplatz an der Unterseite Ihres Raspberry Pi ein.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Stecken Sie die Maus und Tastatur ein.</p></li>
+<li><p>Schließen Sie den Bildschirm an den HDMI-Anschluss von Raspberry Pi an und stellen Sie sicher, dass Ihr Bildschirm an eine Wand Steckdose angeschlossen und eingeschaltet ist.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>If you use a Raspberry Pi 4, you need to connect the screen to the HDMI0 (nearest the power in port).</p>
+</div>
+<ol class="arabic" start="4">
+<li><p>Verwenden Sie das Netzteil und versorgen den Raspberry Pi mit Strom. Nach einigen Sekunden wird der Raspberry Pi OS-Bildschirm angezeigt.</p>
+<blockquote>
+<div><img alt="_images/image20.png" class="align-center" src="_images/image20.png" />
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="if-you-have-no-screen">
+<h2>Wenn Sie keinen Bildschirm haben<a class="headerlink" href="#if-you-have-no-screen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn Sie keine Anzeige haben, können Sie sich aus der Ferne beim Raspberry Pi anmelden. Zuvor müssen Sie jedoch die IP-Addresse des Raspberry Pi abrufen.</p>
+<section id="get-the-ip-address">
+<h3>Die IP-Adresse bekommen<a class="headerlink" href="#get-the-ip-address" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nachdem der Raspberry Pi mit WIFI verbunden ist, müssen wir die IP-Adresse davon erhalten. Es gibt viele Möglichkeiten, die IP-Adresse zu ermitteln, und zwei davon sind wie folgt aufgeführt.</p>
+<p><strong>1. Überprüfung über den Router</strong></p>
+<p>Wenn Sie berechtigt sind, sich beim Router anzumelden (z. B. in einem Heimnetzwerk), können Sie die Raspberry Pi zugewiesenen Adressen auf der Administrationsoberfläche des Routers überprüfen.</p>
+<p>Der Default Hostname des Raspberry Pi-Betriebssystems ist <strong>raspberrypi</strong>, und bitte Sie ihn finden. (Wenn Sie das ArchLinuxARM-System verwenden, suchen Sie bitte alarmpi.)</p>
+<p><strong>2. Scannen von Netzwerksegmenten</strong></p>
+<p>Sie können auch Netzwerk Scannen verwenden, um die IP-Adresse von Raspberry Pi zu ermitteln. Sie können die Software anwenden, den <strong>erweiterten IP-Scanner</strong> usw.</p>
+<p>Scannen Sie den eingestellten IP-Bereich, und alle angeschlossenen Gerätsnamen wird angezeigt. Ebenso, der Default Hostname des Raspberry Pi-Betriebssystems ist <strong>raspberrypi</strong>, wenn Sie ihn nicht geändert haben.</p>
+</section>
+<section id="use-the-ssh-remote-control">
+<h3>Verwenden Sie die SSH-Fernbedienung<a class="headerlink" href="#use-the-ssh-remote-control" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir können die Bash Shell von Raspberry Pi öffnen, mit Anwendung von SSH. Bash ist die Default Standard Shell von Linux. Die Shell selbst ist ein in C geschriebenes Programm und stellt die Brücke zwischen den Kunden und Unix / Linux dar. Darüber hinaus kann es helfen, den größten Teil der erforderlichen Arbeit zu erledigen.</p>
+<p><strong>Für Linux- oder Mac OS X-Benutzer</strong></p>
+<p><strong>Schritt 1</strong></p>
+<p>Gehen Sie zu <strong>Anwendungen</strong>-&gt; <strong>Dienstprogramme</strong>, suchen Sie das <strong>Terminal</strong> und öffnen Sie es.</p>
+<img alt="_images/image21.png" class="align-center" src="_images/image21.png" />
+<p><strong>Schritt 2</strong></p>
+<p>Geben Sie <strong>ssh pi &#64; ip_address</strong> ein. „Pi“ ist Ihr Benutzername und „ip_address“ ist Ihre IP-Adresse. Z. B. :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">pi</span><span class="nd">@192</span><span class="o">.</span><span class="mf">168.18</span><span class="o">.</span><span class="mi">197</span>
+</pre></div>
+</div>
+<p><strong>Schritt 3</strong></p>
+<p>Geben Sie „Ja“ ein.</p>
+<img alt="_images/image22.png" class="align-center" src="_images/image22.png" />
+<p><strong>Schritt 4</strong></p>
+<p>Geben Sie den Password ein und das Default Passwort lautet <strong>raspberry</strong>.</p>
+<img alt="_images/image23.png" class="align-center" src="_images/image23.png" />
+<p><strong>Schritt 5</strong></p>
+<p>Wir verbinden jetzt den Raspberry Pi und sind bereit, mit dem nächsten Schritt fortzufahren.</p>
+<img alt="_images/image24.png" class="align-center" src="_images/image24.png" />
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn Sie das Kennwort eingeben, werden die Zeichen im Fenster nicht entsprechend angezeigt, was normal ist. Sie brauchen lediglich das richtige Passwort einzugeben.</p>
+</div>
+<p><strong>Für Windows-Benutzer</strong></p>
+<p>Wenn Sie ein Windows-Benutzer sind, können Sie SSH mit der Anwendung einiger Software verwenden. Hier empfehlen wir <strong>PuTTY</strong>.</p>
+<p><strong>Schritt 1</strong></p>
+<p>Laden Sie PuTTY herunter.</p>
+<p><strong>Schritt 2</strong></p>
+<p>Öffnen Sie PuTTY und klicken Sie auf <strong>Sitzung</strong> in der linken baumähnlichen Struktur. Geben Sie die IP-Adresse des RPi in das Textfeld unter <strong>Hostname (oder IP-Adresse)</strong> und <strong>22</strong> unter <strong>Port</strong> ein (Default ist 22).</p>
+<img alt="_images/image25.png" class="align-center" src="_images/image25.png" />
+<p><strong>Schritt 3</strong></p>
+<p>Klicken Sie auf <strong>Öffnen</strong>. Beachten Sie bitte, beim ersten Anmelden am Raspberry Pi mit der IP-Adresse eine Sicherheitserinnerung wird anzeigen. Klicken Sie einfach auf <strong>Ja</strong>.</p>
+<p><strong>Schritt 4</strong></p>
+<p>Wenn PuTTY-Fenster die Meldung „**Anmelden als:“** anzeigt, geben Sie „**pi“<strong>(den Benutzernamen des RPis) und das Passwort „</strong>raspberry“ (die Default Einstellung, wenn Sie diese nicht geändert haben) ein.</p>
+<img alt="_images/image26.png" class="align-center" src="_images/image26.png" />
+<p><strong>Schritt 5</strong></p>
+<p>Hier wird der Raspberry Pi angeschlossen und es ist Zeit, die nächsten Schritte durchzuführen.</p>
+<p><strong>Hinweis:</strong> Wenn Sie das Kennwort eingeben, werden die Zeichen im Fenster nicht entsprechend angezeigt, was normal ist. Sie brauchen lediglich das richtige Passwort einzugeben.</p>
+<p>Hinweis: Wenn Sie mit der Verwendung des Befehlsfensters zur Raspberry Pi Steuerung nicht zufrieden sind, können Sie auch die Fernbedingungen verwenden, mit der wir die Dateien im Raspberry Pi einfach verwalten können.</p>
+<p>Einzelheiten dazu finden Sie unter ref:<cite>Fern-Bildschirm</cite>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="libraries.html" class="btn btn-neutral float-right" title="Bibliotheken" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installing_the_os.html" class="btn btn-neutral float-left" title="Installieren des Betriebssystems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, sunfounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

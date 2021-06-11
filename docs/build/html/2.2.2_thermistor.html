@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.2.2 Thermistor &mdash; SunFounder Da Vinci Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.2.3 DHT-11" href="2.2.3_dht-11.html" />
+    <link rel="prev" title="2.2.1 Fotowiderstand" href="2.2.1_photoresistor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Da Vinci Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="component_list.html">Komponentenliste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_do_we_need.html">Was brauchen wir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">Vorbereitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliotheken</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpio_extension_board.html">GPIO-Erweiterungskarte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_the_code.html">Laden Sie die Kode herunter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Ausgabe</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="2_input.html">2 Eingabe</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1.1_button.html">2.1.1 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.2_slide%20Switch.html">2.1.2 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.3_tilt_switch.html">2.1.3 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.4_potentiometer.html">2.1.4 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.5_keypad.html">2.1.5 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.6_joystick.html">2.1.6 Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.1_photoresistor.html">2.2.1 Fotowiderstand</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2.2 Thermistor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Komponenten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#principle">Prinzip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram">Schematische Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-procedures">Experimentelle Verfahren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#for-c-language-users">Für Benutzer in C-Sprache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for-python-language-users">Für Python-Sprachbenutzer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture">Phänomen Bild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.3_dht-11.html">2.2.3 DHT-11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.4_pir.html">2.2.4 PIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.5_ultrasonic_sensor_module.html">2.2.5 Ultraschallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.6_mpu6050_module.html">2.2.6 MPU6050-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.7_mfrc522_rfid_module.html">2.2.7 MFRC522 RFID-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Erweiterung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Da Vinci Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="2_input.html">2 Eingabe</a> &raquo;</li>
+        
+      <li>2.2.2 Thermistor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.2.2_thermistor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="thermistor">
+<h1>2.2.2 Thermistor<a class="headerlink" href="#thermistor" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="introduction">
+<h2>Einführung<a class="headerlink" href="#introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Genau wie der Fotowiderstand Licht erfassen kann, ist der Thermistor ein temperaturempfindliches elektronisches Gerät, mit dem Funktionen der Temperaturregelung wie z. B. ein Wärmealarm realisiert werden können.</p>
+</section>
+<section id="components">
+<h2>Komponenten<a class="headerlink" href="#components" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/list_2.2.2_thermistor.png" src="_images/list_2.2.2_thermistor.png" />
+</section>
+<section id="principle">
+<h2>Prinzip<a class="headerlink" href="#principle" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein Thermistor ist ein wärmeempfindlicher Widerstand, der eine präzise und vorhersagbare Widerstandsänderung proportional zu kleinen Temperaturänderungen aufweist. Wie sehr sich sein Widerstand ändert, hängt von seiner einzigartigen Zusammensetzung ab. Thermistoren sind Teile einer größeren Gruppe passiver Komponenten. Und im Gegensatz zu ihren Gegenstücken mit aktiven Komponenten können passive Geräte keine Leistungsverstärkung oder Verstärkung für eine Schaltung bereitstellen.</p>
+<p>Der Thermistor ist ein empfindliches Element und es gibt zwei Arten: den negativen Temperaturkoeffizienten (NTC) und den positiven Temperaturkoeffizienten (PTC), auch bekannt als NTC und PTC. Sein Widerstand variiert erheblich mit der Temperatur. Der Widerstand des PTC-Thermistors steigt mit der Temperatur, während der Zustand des NTC dem ersteren entgegengesetzt ist. In diesem Experiment verwenden wir NTC.</p>
+<img alt="_images/image325.png" src="_images/image325.png" />
+<p>Das Prinzip ist, dass sich der Widerstand des NTC-Thermistors mit der Temperatur der äußeren Umgebung ändert. Es erfasst die Echtzeit-Temperatur der Umgebung. Wenn die Temperatur höher wird, nimmt der Widerstand des Thermistors ab. Anschließend werden die Spannungsdaten vom A / D-Adapter in digitale Größen umgewandelt. Die Temperatur in Celsius oder Fahrenheit wird über die Programmierung ausgegeben.</p>
+<p>In diesem Experiment werden ein Thermistor und ein 10k-Pull-up-Widerstand verwendet. Jeder Thermistor hat einen normalen Widerstand. Hier sind es 10 kOhm, die unter 25 Grad Celsius gemessen werden.</p>
+<p>Hier ist die Beziehung zwischen dem Widerstand und der Temperatur:</p>
+<p>R<sub>T</sub> =R<sub>N</sub> exp<sup>B(1/TK – 1/TN)</sup></p>
+<p><strong>RT</strong> ist der Widerstand des NTC-Thermistors bei einer Temperatur von <strong>TK</strong>.</p>
+<p><strong>RN</strong> ist der Widerstand des NTC-Thermistors unter der Nenntemperatur <strong>TN</strong>. Hier beträgt der numerische Wert von <strong>RN</strong> 10k.</p>
+<p><strong>TK</strong> ist eine Kelvin-Temperatur und die Einheit ist K. Hier beträgt der numerische Wert von <strong>TK</strong>273.15 + Grad Celsius.</p>
+<p><strong>TN</strong> ist eine Kelvin-Nenntemperatur; Das Gerät ist auch K. Hier beträgt der numerische Wert von <strong>TN</strong> 273.15+25.</p>
+<p>Und <strong>B</strong>(beta), die Materialkonstante des NTC-Thermistors, wird auch als Wärmeempfindlichkeitsindex mit einem numerischen Wert von 3950 bezeichnet.</p>
+<p><strong>exp</strong> ist die Abkürzung für exponentiell, und die Basisnummer ist eine natürliche Nummer und entspricht ungefähr 2.7.</p>
+<p>Konvertieren Sie diese Formel T<sub>K</sub>=1/(ln(R<sub>T</sub>/R<sub>N</sub>)/B+1/T<sub>N</sub>), um eine Kelvin-Temperatur zu erhalten, die minus 273.15 Grad Celsius entspricht.</p>
+<p>Diese Beziehung ist eine empirische Formel. Sie ist nur dann genau, wenn Temperatur und Widerstand im effektiven Bereich liegen.</p>
+</section>
+<section id="schematic-diagram">
+<h2>Schematische Darstellung<a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image323.png" src="_images/image323.png" />
+<img alt="_images/image324.png" src="_images/image324.png" />
+</section>
+<section id="experimental-procedures">
+<h2>Experimentelle Verfahren<a class="headerlink" href="#experimental-procedures" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Schritt 1:</strong> Bauen Sie die Schaltung auf.</p>
+<img alt="_images/image202.png" src="_images/image202.png" />
+<section id="for-c-language-users">
+<h3>Für Benutzer in C-Sprache<a class="headerlink" href="#for-c-language-users" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>Schritt 2:</strong> Gehen Sie zum Ordner der Kode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">davinci</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Schritt 3:</strong> Kompilieren Sie die Kode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span> <span class="mf">2.2</span><span class="o">.</span><span class="mi">2</span><span class="n">_Thermistor</span><span class="o">.</span><span class="n">c</span> <span class="o">-</span><span class="n">lwiringPi</span> <span class="o">-</span><span class="n">lm</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>-lm dient zum Laden der Bibliotheksmathematik. Nicht weglassen, sonst wird ein Fehler gemacht.</p>
+</div>
+<p><strong>Schritt 4:</strong> Führen Sie die ausführbare Datei aus.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">./</span><span class="n">a</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<p>Während die Kode ausgeführt wird, erkennt der Thermistor die Umgebungstemperatur, die nach Abschluss der Programmberechnung auf dem Bildschirm angezeigt wird.</p>
+<p><strong>Kode</strong></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;wiringPi.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+<span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">uchar</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">uint</span><span class="p">;</span>
+
+<span class="cp">#define     ADC_CS    0</span>
+<span class="cp">#define     ADC_CLK   1</span>
+<span class="cp">#define     ADC_DIO   2</span>
+
+<span class="n">uchar</span> <span class="nf">get_ADC_Result</span><span class="p">(</span><span class="n">uint</span> <span class="n">channel</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">uchar</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">uchar</span> <span class="n">dat1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dat2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">sel</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">odd</span> <span class="o">=</span> <span class="n">channel</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CS</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="c1">// Start bit</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="c1">//Single End mode</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="c1">// ODD</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span><span class="n">odd</span><span class="p">);</span>  <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="c1">//Select</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span><span class="n">sel</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+        <span class="n">pinMode</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+        <span class="n">dat1</span><span class="o">=</span><span class="n">dat1</span><span class="o">&lt;&lt;</span><span class="mi">1</span> <span class="o">|</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">dat2</span> <span class="o">=</span> <span class="n">dat2</span> <span class="o">|</span> <span class="p">((</span><span class="n">uchar</span><span class="p">)(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">))</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">);</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">ADC_CS</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">ADC_DIO</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">dat1</span><span class="o">==</span><span class="n">dat2</span><span class="p">)</span> <span class="o">?</span> <span class="nl">dat1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">analogVal</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">Vr</span><span class="p">,</span> <span class="n">Rt</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">wiringPiSetup</span><span class="p">()</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span> <span class="c1">//when initialize wiring failed,print messageto screen</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;setup wiringPi failed !&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">ADC_CS</span><span class="p">,</span>  <span class="n">OUTPUT</span><span class="p">);</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">ADC_CLK</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+        <span class="n">analogVal</span> <span class="o">=</span> <span class="n">get_ADC_Result</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">Vr</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">analogVal</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span><span class="p">;</span>
+        <span class="n">Rt</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">Vr</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">Vr</span><span class="p">));</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(((</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span><span class="o">/</span><span class="mi">10000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3950</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mf">273.15</span> <span class="o">+</span> <span class="mi">25</span><span class="p">)));</span>
+        <span class="n">cel</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">;</span>
+        <span class="n">Fah</span> <span class="o">=</span> <span class="n">cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span><span class="mi">32</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Celsius: %.2f C  Fahrenheit: %.2f F</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">);</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Kode Erklärung</strong></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>Es gibt eine C-Numerik-Bibliothek, die eine Reihe von Funktionen deklariert, um allgemeine mathematische Operationen und Transformationen zu berechnen.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">analogVal</span> <span class="o">=</span> <span class="n">get_ADC_Result</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Mit dieser Funktion wird der Wert des Thermistors abgelesen.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Vr</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">analogVal</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span><span class="p">;</span>
+<span class="n">Rt</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">Vr</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">Vr</span><span class="p">));</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(((</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span><span class="o">/</span><span class="mi">10000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3950</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mf">273.15</span> <span class="o">+</span> <span class="mi">25</span><span class="p">)));</span>
+<span class="n">cel</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">;</span>
+<span class="n">Fah</span> <span class="o">=</span> <span class="n">cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span><span class="mi">32</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Celsius: %.2f C  Fahrenheit: %.2f F</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Diese Berechnungen wandeln die Thermistorwerte in Celsiuswerte um.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Vr</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">analogVal</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span><span class="p">;</span>
+<span class="n">Rt</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">Vr</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">Vr</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Diese beiden Kodezeilen berechnen die Spannungsverteilung mit dem analogen Lesewert, um Rt (Widerstand des Thermistors) zu erhalten.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(((</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span><span class="o">/</span><span class="mi">10000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3950</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mf">273.15</span> <span class="o">+</span> <span class="mi">25</span><span class="p">)));</span>
+</pre></div>
+</div>
+<p>Diese Kode bezieht sich auf das Einstecken von Rt in die Formel <strong>TK=1/(ln(RT/RN)/B+1/TN)</strong>,um die Kelvin-Temperatur zu erhalten.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Wandeln Sie die Kelvin-Temperatur in Grad Celsius um.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Fah</span> <span class="o">=</span> <span class="n">cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span><span class="mi">32</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Konvertieren Sie Grad Celsius in Fahrenheit.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Celsius: %.2f C  Fahrenheit: %.2f F</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Drucken Sie Celsius, Fahrenheit und ihre Einheiten auf dem Display.</p>
+</section>
+<section id="for-python-language-users">
+<h3>Für Python-Sprachbenutzer<a class="headerlink" href="#for-python-language-users" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>Schritt 2:</strong> Gehen Sie zum Ordner der Kode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">davinci</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">python</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Schritt 3:</strong> Führen Sie die ausführbare Datei aus</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python3</span> <span class="mf">2.2</span><span class="o">.</span><span class="mi">2</span><span class="n">_Thermistor</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Während die Kode ausgeführt wird, erkennt der Thermistor die Umgebungstemperatur, die nach Abschluss der Programmberechnung auf dem Bildschirm angezeigt wird.</p>
+<p><strong>Kode</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
+<span class="kn">import</span> <span class="nn">ADC0834</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+    <span class="n">ADC0834</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">analogVal</span> <span class="o">=</span> <span class="n">ADC0834</span><span class="o">.</span><span class="n">getResult</span><span class="p">()</span>
+        <span class="n">Vr</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">analogVal</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
+        <span class="n">Rt</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="n">Vr</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="n">Vr</span><span class="p">)</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(((</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3950</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mf">273.15</span><span class="o">+</span><span class="mi">25</span><span class="p">)))</span>
+        <span class="n">Cel</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span>
+        <span class="n">Fah</span> <span class="o">=</span> <span class="n">Cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;Celsius: </span><span class="si">%.2f</span><span class="s1"> °C  Fahrenheit: </span><span class="si">%.2f</span><span class="s1"> ℉&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">Cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">init</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">loop</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">ADC0834</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Kode Erklärung</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+<p>Es gibt eine numerische Bibliothek, die eine Reihe von Funktionen deklariert, um allgemeine mathematische Operationen und Transformationen zu berechnen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">analogVal</span> <span class="o">=</span> <span class="n">ADC0834</span><span class="o">.</span><span class="n">getResult</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Mit dieser Funktion wird der Wert des Thermistors abgelesen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Vr</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">analogVal</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
+<span class="n">Rt</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="n">Vr</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="n">Vr</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(((</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3950</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mf">273.15</span><span class="o">+</span><span class="mi">25</span><span class="p">)))</span>
+<span class="n">Cel</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">Fah</span> <span class="o">=</span> <span class="n">Cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+<span class="k">print</span> <span class="p">(</span><span class="s1">&#39;Celsius: </span><span class="si">%.2f</span><span class="s1"> °C  Fahrenheit: </span><span class="si">%.2f</span><span class="s1"> ℉&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">Cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Diese Berechnungen wandeln die Thermistorwerte in Grad Celsius und Fahrenheit um.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Vr</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">analogVal</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
+<span class="n">Rt</span> <span class="o">=</span> <span class="mi">10000</span> <span class="o">*</span> <span class="n">Vr</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="n">Vr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Diese beiden Kodezeilen berechnen die Spannungsverteilung mit dem analogen Lesewert, um Rt (Widerstand des Thermistors) zu erhalten.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(((</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3950</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mf">273.15</span><span class="o">+</span><span class="mi">25</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Diese Kode bezieht sich auf das Einstecken von Rt in die Formel <strong>TK=1/(ln(RT/RN)/B+1/TN)</strong>,um die Kelvin-Temperatur zu erhalten.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span>
+</pre></div>
+</div>
+<p>Wandeln Sie die Kelvin-Temperatur in Grad Celsius um.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Fah</span> <span class="o">=</span> <span class="n">Cel</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+</pre></div>
+</div>
+<p>Konvertieren Sie den Celsius-Grad in Fahrenheit-Grad.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="p">(</span><span class="s1">&#39;Celsius: </span><span class="si">%.2f</span><span class="s1"> °C  Fahrenheit: </span><span class="si">%.2f</span><span class="s1"> ℉&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">Cel</span><span class="p">,</span> <span class="n">Fah</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Drucken Sie Celsius, Fahrenheit und ihre Einheiten auf dem Display.</p>
+</section>
+</section>
+<section id="phenomenon-picture">
+<h2>Phänomen Bild<a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image203.jpeg" src="_images/image203.jpeg" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.2.3_dht-11.html" class="btn btn-neutral float-right" title="2.2.3 DHT-11" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.2.1_photoresistor.html" class="btn btn-neutral float-left" title="2.2.1 Fotowiderstand" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, sunfounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

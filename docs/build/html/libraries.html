@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bibliotheken &mdash; SunFounder Da Vinci Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="GPIO-Erweiterungskarte" href="gpio_extension_board.html" />
+    <link rel="prev" title="Richten Sie Ihren Raspberry Pi ein" href="set_up_your_raspberry_pi.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Da Vinci Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="component_list.html">Komponentenliste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_do_we_need.html">Was brauchen wir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">Vorbereitung</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bibliotheken</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rpi-gpio">RPi.GPIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wiringpi">WiringPi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gpio_extension_board.html">GPIO-Erweiterungskarte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_the_code.html">Laden Sie die Kode herunter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Ausgabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_input.html">2 Eingabe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Erweiterung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Da Vinci Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Bibliotheken</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/libraries.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="libraries">
+<h1>Bibliotheken<a class="headerlink" href="#libraries" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Bei der Programmierung mit Raspberry Pi werden zwei wichtige Bibliotheken verwendet: WiringPi und RPi.GPIO. Das Raspberry Pi OS installiert sie standardmäßig, Sie können sie direkt verwenden.</p>
+<section id="rpi-gpio">
+<h2>RPi.GPIO<a class="headerlink" href="#rpi-gpio" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn Sie ein Python-Benutzer sind, können Sie GPIOs mit der von RPi.GPIO bereitgestellten API programmieren.</p>
+<p>RPi.GPIO ist ein Modul zur Steuerung von Raspberry Pi GPIO-Kanälen. Dieses Paket enthält eine Klasse zur Steuerung des GPIO einer Raspberry Pi. Beispiele und Dokumente finden Sie unter <a class="reference external" href="http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/</a></p>
+<p>Beim Testen ob RPi.GPIO installiert ist oder nicht, geben Sie bitte Python ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+</pre></div>
+</div>
+<img alt="_images/image27.png" src="_images/image27.png" />
+<p>Geben Sie in Python CLI „import RPi.GPIO“ ein. Wenn kein Fehler stellt, bedeutet, RPi.GPIO ist installiert.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">RPi.GPIO</span>
+</pre></div>
+</div>
+<img alt="_images/image28.png" src="_images/image28.png" />
+<p>Wenn Sie die Python-CLI beenden möchten, geben Sie ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/image29.png" src="_images/image29.png" />
+</section>
+<section id="wiringpi">
+<h2>WiringPi<a class="headerlink" href="#wiringpi" title="Link zu dieser Überschrift">¶</a></h2>
+<p>wiringPi ist eine GPIO-Bibliothek in C-Sprache, die auf die Raspberry Pi-Plattform angewendet wird. Es entspricht GUN Lv3. Die Funktionen in WiringPi sind ähnlich wie im Verkabelungssystem von Arduino. Die mit Arduino vertrauten Benutzer wird die einfachere Verwendung von wiringPi.</p>
+<p>WiringPi enthält viele GPIO-Befehle, mit denen Sie alle Arten von Schnittstellen auf Raspberry Pi steuern können. Anhand der folgenden Anweisungen können Sie testen, ob die wiringPi-Bibliothek erfolgreich installiert wurde oder nicht.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpio</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<img alt="_images/image30.png" src="_images/image30.png" />
+<p>Wenn Sie Raspberry Pi 4B verwenden, die GPIO-Version jedoch <strong>2.50</strong> ist, wird nach Ausführung des C-Sprachcodes keine Antwort ausgegeben, die GPIO-Pins funktionieren nicht. Da müssen Sie manuell auf Version <strong>2.52</strong> aktualisieren. Die Aktualisierungsschritte lauten wie folgt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span>
+
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">project</span><span class="o">-</span><span class="n">downloads</span><span class="o">.</span><span class="n">drogon</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">wiringpi</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="n">deb</span>
+
+<span class="n">sudo</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="n">wiringpi</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+</div>
+<p>Überprüfen Sie mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpio</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>und sicherstellen, es ist Version 2.52.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpio</span> <span class="n">readall</span>
+</pre></div>
+</div>
+<img alt="_images/image31.png" src="_images/image31.png" />
+<p>Weitere Informationen zu wiringPi finden Sie unter: <a class="reference external" href="http://wiringpi.com/download-and-install/">WiringPi</a>.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gpio_extension_board.html" class="btn btn-neutral float-right" title="GPIO-Erweiterungskarte" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="set_up_your_raspberry_pi.html" class="btn btn-neutral float-left" title="Richten Sie Ihren Raspberry Pi ein" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, sunfounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
