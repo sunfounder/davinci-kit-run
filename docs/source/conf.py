@@ -50,10 +50,10 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 
 html_js_files = [
-    'https://ezblock.cc/readDocFile/readTheDoc/src/js/mode-sh.js',
     'https://ezblock.cc/readDocFile/topHead.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/ace.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/mode-python.js',
+    'https://ezblock.cc/readDocFile/readTheDoc/src/js/mode-sh.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/monokai.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/xterm.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/readTheDocIndex.js',
