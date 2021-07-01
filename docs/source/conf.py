@@ -50,6 +50,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 
 html_js_files = [
+    'https://ezblock.cc/readDocFile/readTheDoc/src/js/mode-sh.js',
     'https://ezblock.cc/readDocFile/topHead.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/ace.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/mode-python.js',
@@ -60,6 +61,7 @@ html_js_files = [
 html_css_files = [
     'https://ezblock.cc/readDocFile/topHead.css',
     'https://ezblock.cc/readDocFile/readTheDoc/src/css/index.css',
+    'https://ezblock.cc/readDocFile/readTheDoc/src/css/xterm.css',
 ]
 
 # Add any paths that contain custom static files (such as style sheets) here,
