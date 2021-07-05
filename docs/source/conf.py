@@ -56,6 +56,7 @@ html_js_files = [
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/mode-sh.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/monokai.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/xterm.js',
+    'https://ebzlokc.cc/readDocFile/readTheDoc/src/js/FitAddon.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/readTheDocIndex.js',
 ]
 html_css_files = [
