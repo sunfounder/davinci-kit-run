@@ -137,6 +137,10 @@ After the code runs, you can see ”Greetings”,”From SunFounder” displayin
 
 **Code** 
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import LCD1602

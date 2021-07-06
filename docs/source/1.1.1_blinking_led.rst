@@ -398,6 +398,10 @@ see the effect after the change.
 
 The following is the program code:
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block:: python
 
    #!/usr/bin/env python3

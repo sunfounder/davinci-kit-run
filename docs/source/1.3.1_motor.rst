@@ -236,6 +236,10 @@ for 5s. This series of actions will be executed repeatedly.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

@@ -280,6 +280,10 @@ detected by DHT11 on the computer screen.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

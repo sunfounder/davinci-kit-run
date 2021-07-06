@@ -339,6 +339,10 @@ printed on the screen after being calculating.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import smbus

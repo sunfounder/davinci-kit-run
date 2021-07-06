@@ -343,6 +343,10 @@ anti-clockwise depending on your input 'a' or 'c'.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

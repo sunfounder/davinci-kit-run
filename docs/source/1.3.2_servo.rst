@@ -200,6 +200,10 @@ to 180 degrees, and then from 180 degrees to 0 degrees, circularly.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

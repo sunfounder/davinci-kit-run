@@ -291,6 +291,10 @@ be printed on the screen once it finishes the program calculation.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     #!/usr/bin/env python3

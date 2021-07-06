@@ -344,6 +344,10 @@ Value) will be printed on the screen.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

@@ -442,6 +442,10 @@ of LED will change accordingly.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     #!/usr/bin/env python3

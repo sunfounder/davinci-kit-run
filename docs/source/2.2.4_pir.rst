@@ -213,6 +213,10 @@ need to try to adjust these two potentiometers.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

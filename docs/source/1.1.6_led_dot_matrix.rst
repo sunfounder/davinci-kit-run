@@ -280,6 +280,10 @@ After the code runs, the LED dot matrix lights up and out row by row and column 
 
 **Code**
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block:: python
 
    import RPi.GPIO as GPIO

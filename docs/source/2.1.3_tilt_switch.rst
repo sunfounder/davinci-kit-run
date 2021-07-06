@@ -195,6 +195,10 @@ turns on. Place it horizontally again, and the green LED will lights on.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

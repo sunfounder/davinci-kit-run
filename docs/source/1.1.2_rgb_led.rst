@@ -259,6 +259,10 @@ yellow, pink, and cyan.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

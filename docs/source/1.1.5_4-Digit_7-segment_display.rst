@@ -323,6 +323,10 @@ After the code runs, the program takes a count, increasing by 1 per second, and 
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

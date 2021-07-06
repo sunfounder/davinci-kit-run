@@ -222,6 +222,10 @@ The code run, the buzzer plays a piece of music.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

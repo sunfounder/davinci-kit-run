@@ -265,6 +265,10 @@ the distance.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import LCD1602

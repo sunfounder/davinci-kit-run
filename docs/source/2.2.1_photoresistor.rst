@@ -182,6 +182,10 @@ of light that the photoresistor senses.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     #!/usr/bin/env python3

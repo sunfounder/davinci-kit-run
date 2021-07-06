@@ -163,6 +163,10 @@ The code run, the buzzer beeps.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

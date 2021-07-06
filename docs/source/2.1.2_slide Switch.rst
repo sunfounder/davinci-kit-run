@@ -196,6 +196,10 @@ the yellow LED lights up; to the right, the red light turns on.
 
 **Code**
 
+.. raw:: html
+   
+    <run></run>
+    
 .. code-block:: python
 
     import RPi.GPIO as GPIO
