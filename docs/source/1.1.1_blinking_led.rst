@@ -156,6 +156,10 @@ instead of right-clicking. But you can choose the method you prefer.
 
 2) If you log into the Raspberry Pi remotely, use ``cd`` to change directory:
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    cd /home/pi/davinci-kit-for-raspberry-pi/c/1.1.1/
@@ -168,6 +172,10 @@ procedures based on these two methods are the same. Let's move on.
 
 **Step 3:** Compile the code
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    gcc 1.1.1_BlinkingLed.c -o BlinkingLed -lwiringPi
@@ -184,6 +192,10 @@ the library wiringPi (``l`` is the abbreviation of library).
 
 **Step 4:** Run the executable file output in the previous step.
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    sudo ./BlinkingLed
@@ -203,6 +215,10 @@ If you want to edit the code file ``1.1.1_BlinkingLed.c``, press ``Ctrl +
 C`` to stop running the code. Then type the following command to open
 it:
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    nano 1.1.1_BlinkingLed.c
@@ -357,6 +373,10 @@ can see the results.
 
 2. If you log into the Raspberry Pi remotely, type in the command:
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    cd /home/pi/davinci-kit-for-raspberry-pi/python
@@ -366,6 +386,10 @@ can see the results.
 
 **Step 3:** Run the code
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    sudo python3 1.1.1_BlinkingLed.py
@@ -379,6 +403,10 @@ After the code runs, you will see the LED flashing.
 press ``Ctrl + C`` to stop running the code. Then type the following
 command to open 1.1.1_BlinkingLed.py:
 
+.. raw:: html
+   
+   <run></run>
+   
 .. code-block::
 
    nano 1.1.1_BlinkingLed.py
