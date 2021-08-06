@@ -73,21 +73,15 @@ bus.
 
 **Pins of 74HC595 and their functions**:
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8
-pins of 7-segment display directly.
+* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
 
-* **Q7’**: Series output pin, connected to DS of another 74HC595 to
-connect multiple 74HC595s in series.
+* **Q7’**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series.
 
 * **MR**: Reset pin, active at low level;
 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the
-data in shift register moves successively one bit, i.e. data in Q1 moves
-to Q2, and so forth. While on the falling edge, the data in shift
-register remain unchanged.
+* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
 
-* **STcp**: Time sequence input of storage register. On the rising edge,
-data in the shift register moves into memory register.
+* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
 
 * **CE**: Output enable pin, active at low level.
 
@@ -131,17 +125,29 @@ For C Language Users
 
 Step 2: Get into the folder of the code.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/c/1.1.4/
 
 Step 3: Compile.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     gcc 1.1.4_7-Segment.c -lwiringPi
 
 Step 4: Run the executable file above.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -230,7 +236,11 @@ Assign the dat data to SDI(DS) by bits. Here we assume dat=0x3f(0011 1111, when 
     digitalWrite(SRCLK, 1);
 
 SRCLK's initial value was set to 0, and here it's set to 1, which is to generate a rising edge pulse, then shift the DS date to shift register.
-        digitalWrite(RCLK, 1);
+
+.. code-block:: c
+        
+		digitalWrite(RCLK, 1);
+
 RCLK's initial value was set to 0, and here it's set to 1, which is to generate a rising edge, then shift data from shift register to storage register.
 
 .. code-block:: c
@@ -242,18 +252,29 @@ RCLK's initial value was set to 0, and here it's set to 1, which is to generate 
                 delay(500);
             }
         }
-In this for loop, we use "%1X" to output i as a hexadecimal number. Apply i to find the corresponding segment code in the SegCode[] array, and employ hc595_shift() to pass the SegCode into 74HC595's shift register.
+
+In this for loop, we use "%1X" to output i as a hexadecimal number. 
+Apply i to find the corresponding segment code in the SegCode[] array, 
+and employ hc595_shift() to pass the SegCode into 74HC595's shift register.
 
 For Python Language Users
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Step 2: Get into the folder of the code.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/python/
 
 Step 3: Run.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -263,10 +284,6 @@ After the code runs, you'll see the 7-segment display display 0-9, A-F.
 
 **Code**
 
-.. raw:: html
-   
-    <run></run>
-    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

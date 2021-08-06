@@ -43,17 +43,29 @@ GPIO22       Pin 15   3        22
 
 **Step 2**: Change directory.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block:: 
 
     cd /home/pi/davinci-kit-for-raspberry-pi/c/3.1.10/
 
 **Step 3**: Compile.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     gcc 3.1.10_AlarmBell.c -lwiringPi -lpthread
 
 **Step 4**: Run.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -202,11 +214,19 @@ and the LED don’t work.
 
 **Step 2:** Change directory.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/python/
 
 **Step 3:** Run.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -282,7 +302,8 @@ In the function on():
    tBuzz = threading.Thread(target=buzzerWork)\ **：**\ Create the
    thread and its prototype is as follows:
 
-class threading.Thread(group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
+
+class threading.Thread(group=None, target=None, name=None, args=(), kwargs={}, \*, daemon=None)
 
 Among the construction methods, the principal parameter is **target**,
 we need to assign a callable object (here are the functions **ledWork**

@@ -13,7 +13,7 @@ guidance of experiment instructions. In this process, you can learn some
 basic knowledge about programming. Also you can explore more application
 by yourself. Now go for it!
 
-If you want to learn another projects which we don’t have, please feel free to send Email and we will update to our online tutorials as soon as possible, any suggestions are welcomed.
+If you want to learn another projects which we don't have, please feel free to send Email and we will update to our online tutorials as soon as possible, any suggestions are welcomed.
 
 Here is the Email: cs@sunfounder.com.
 
@@ -23,7 +23,6 @@ Here is the Email: cs@sunfounder.com.
 
     component_list
     introduction
-    what_do_we_need
     preparation
     libraries
     gpio_extension_board
@@ -31,7 +30,10 @@ Here is the Email: cs@sunfounder.com.
     1_output
     2_input
     3_extension
-    appendix
+    iot/4_iot_projects
+    processing/play_with_processing
+    scratch/play_with_scratch
+    appendix/appendix
 
 
 

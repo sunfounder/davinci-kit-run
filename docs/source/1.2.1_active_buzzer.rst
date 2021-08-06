@@ -80,17 +80,29 @@ For C Language Users
 
 **Step 2**: Open the code file.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/c/1.2.1/
 
 **Step 3**: Compile the code.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     gcc 1.2.1_ActiveBuzzer.c -lwiringPi
 
 **Step 4**: Run the executable file above.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -149,11 +161,19 @@ For Python Language Users
 
 **Step 2**: Open the code file.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/python
 
 **Step 3**: Run.
+
+.. raw:: html
+
+    <run></run>
 
 .. code-block::
 
@@ -163,10 +183,6 @@ The code run, the buzzer beeps.
 
 **Code**
 
-.. raw:: html
-   
-    <run></run>
-    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

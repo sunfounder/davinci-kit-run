@@ -99,9 +99,9 @@ For C Language Users
 **Step 2:** Go to the folder of the code.
 
 .. raw:: html
-   
-    <run></run>
-    
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/c/1.1.2/
@@ -109,9 +109,9 @@ For C Language Users
 **Step 3:** Compile the code.
 
 .. raw:: html
-   
-    <run></run>
-    
+
+   <run></run>
+
 .. code-block::
 
     gcc 1.1.2_rgbLed.c -lwiringPi
@@ -123,9 +123,9 @@ For C Language Users
 **Step 4:** Run the executable file.
 
 .. raw:: html
-   
-    <run></run>
-    
+
+   <run></run>
+
 .. code-block::
 
     sudo ./a.out
@@ -257,9 +257,9 @@ For Python Language Users
 **Step 2:** Open the code file.
 
 .. raw:: html
-   
-    <run></run>
-    
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/python
@@ -267,9 +267,9 @@ For Python Language Users
 **Step 3:** Run.
 
 .. raw:: html
-   
-    <run></run>
-    
+
+   <run></run>
+
 .. code-block::
 
     sudo python3 1.1.2_rgbLed.py
@@ -279,10 +279,6 @@ yellow, pink, and cyan.
 
 **Code**
 
-.. raw:: html
-   
-    <run></run>
-    
 .. code-block:: python
 
     import RPi.GPIO as GPIO

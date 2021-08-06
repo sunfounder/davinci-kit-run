@@ -75,6 +75,9 @@ output shaft rotates a circle requiring a 32*64=2048 step.
 
 **ULN2003**
 
+To apply the motor in the circuit, a driver board needs to be used. Stepper Motor Driver-ULN2003 is a 7-channel inverter circuit. That is, when the input pin is at high level, the output pin of ULN2003 is at low level, and vice versa. If we supply high level to IN1, and low level to IN2, IN3 and IN4, then the output end OUT1 is at low level, and all the other output ends are at high level.
+ The internal structure of the chip is shown as below.
+
 .. image:: media/image338.png
 
 
@@ -112,17 +115,29 @@ For C Language Users
 
 **Step 2**: Go to the folder of the code.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/c/1.3.3/
 
 **Step 3**: Compile the code.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     gcc 1.3.3_StepperMotor.c -lwiringPi
 
 **Step 4**: Run the executable file.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -328,11 +343,19 @@ For Python Language Users
 
 **Step 2**: Go to the folder of the code.
 
+.. raw:: html
+
+   <run></run>
+
 .. code-block::
 
     cd /home/pi/davinci-kit-for-raspberry-pi/python/
 
 **Step 3**: Run the executable file.
+
+.. raw:: html
+
+   <run></run>
 
 .. code-block::
 
@@ -343,10 +366,6 @@ anti-clockwise depending on your input 'a' or 'c'.
 
 **Code**
 
-.. raw:: html
-   
-    <run></run>
-    
 .. code-block:: python
 
     import RPi.GPIO as GPIO
