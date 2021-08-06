@@ -247,9 +247,16 @@ x, y, Btn are displayed on screen.
 
 **Code**
 
-.. code-block:: python
+.. note::
 
-    #!/usr/bin/env python3
+    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``davinci-kit-for-raspberry-pi\python``. After modifying the code, you can run it directly to see the effect. After confirming that there are no problems, you can use the Copy button to copy the modified code, then open the source code in Terminal via ``nano``  cammand and paste it.
+    
+    
+.. raw:: html
+
+    <run></run>
+
+.. code-block:: python
 
     import RPi.GPIO as GPIO
     import ADC0834

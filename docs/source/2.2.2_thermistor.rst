@@ -311,10 +311,16 @@ be printed on the screen once it finishes the program calculation.
 
 **Code**
 
-.. code-block:: python
+.. note::
 
-    #!/usr/bin/env python3
-    # -*- coding: utf-8 -*-
+    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``davinci-kit-for-raspberry-pi\python``. After modifying the code, you can run it directly to see the effect. After confirming that there are no problems, you can use the Copy button to copy the modified code, then open the source code in Terminal via ``nano``  cammand and paste it.
+    
+    
+.. raw:: html
+
+    <run></run>
+
+.. code-block:: python
 
     import RPi.GPIO as GPIO
     import ADC0834
@@ -332,7 +338,7 @@ be printed on the screen once it finishes the program calculation.
             temp = 1/(((math.log(Rt / 10000)) / 3950) + (1 / (273.15+25)))
             Cel = temp - 273.15
             Fah = Cel * 1.8 + 32
-            print ('Celsius: %.2f °C  Fahrenheit: %.2f ℉' % (Cel, Fah))
+            print ('Celsius: %.2f C  Fahrenheit: %.2f F' % (Cel, Fah))
             time.sleep(0.2)
 
     if __name__ == '__main__':

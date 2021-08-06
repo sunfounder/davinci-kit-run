@@ -233,6 +233,15 @@ need to try to adjust these two potentiometers.
 
 **Code**
 
+.. note::
+
+    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``davinci-kit-for-raspberry-pi\python``. After modifying the code, you can run it directly to see the effect. After confirming that there are no problems, you can use the Copy button to copy the modified code, then open the source code in Terminal via ``nano``  cammand and paste it.
+    
+    
+.. raw:: html
+
+    <run></run>
+
 .. code-block:: python
 
     import RPi.GPIO as GPIO
@@ -243,7 +252,7 @@ need to try to adjust these two potentiometers.
 
     def setup():
         global p_R, p_G, p_B
-        GPIO.setmode(GPIO.BCM)      # Set the GPIO modes to BCM Numbering
+        GPIO.setmode(GPIO.BCM)		# Set the GPIO modes to BCM Numbering
         GPIO.setup(pirPin, GPIO.IN)    # Set pirPin to input
         # Set all LedPin's mode to output and initial level to High(3.3v)
         for i in rgbPins:
@@ -279,7 +288,7 @@ need to try to adjust these two potentiometers.
         p_R.ChangeDutyCycle(R_val)
         p_G.ChangeDutyCycle(G_val)
         p_B.ChangeDutyCycle(B_val)
-        #print ("color_msg: R_val = %s, G_val = %s, B_val = %s"%(R_val, G_val, B_val))
+        #print ("color_msg: R_val = %s,	G_val = %s,	B_val = %s"%(R_val, G_val, B_val))
 
     def loop():
         while True:

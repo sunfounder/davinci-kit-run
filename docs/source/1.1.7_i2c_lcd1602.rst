@@ -254,7 +254,16 @@ For Python Language Users
 
 After the code runs, you can see ”Greetings”,”From SunFounder” displaying on the LCD.
 
-**Code** 
+**Code**
+
+.. note::
+
+    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``davinci-kit-for-raspberry-pi\python``. After modifying the code, you can run it directly to see the effect. After confirming that there are no problems, you can use the Copy button to copy the modified code, then open the source code in Terminal via ``nano``  cammand and paste it.
+    
+    
+.. raw:: html
+
+    <run></run>
 
 .. code-block:: python
 
@@ -262,7 +271,7 @@ After the code runs, you can see ”Greetings”,”From SunFounder” displayin
     import time
 
     def setup():
-        LCD1602.init(0x27, 1)   # init(slave address, background light)
+        LCD1602.init(0x27, 1)	# init(slave address, background light)
         LCD1602.write(0, 0, 'Greetings!!')
         LCD1602.write(1, 1, 'from SunFounder')
         time.sleep(2)
@@ -275,7 +284,6 @@ After the code runs, you can see ”Greetings”,”From SunFounder” displayin
             setup()
         except KeyboardInterrupt:
             destroy()
-
 
 
 **Code Explanation**

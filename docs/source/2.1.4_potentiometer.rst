@@ -462,9 +462,16 @@ of LED will change accordingly.
 
 **Code**
 
-.. code-block:: python
+.. note::
 
-    #!/usr/bin/env python3
+    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``davinci-kit-for-raspberry-pi\python``. After modifying the code, you can run it directly to see the effect. After confirming that there are no problems, you can use the Copy button to copy the modified code, then open the source code in Terminal via ``nano``  cammand and paste it.
+    
+    
+.. raw:: html
+
+    <run></run>
+
+.. code-block:: python
 
     import RPi.GPIO as GPIO
     import ADC0834
@@ -481,28 +488,20 @@ of LED will change accordingly.
         ADC0834.setup()
         # Set led as pwm channel and frequece to 2KHz
         led_val = GPIO.PWM(LedPin, 2000)
-
         # Set all begin with value 0
         led_val.start(0)
-
-    # Define a MAP function for mapping values.  Like from 0~255 to 0~100
-    def MAP(x, in_min, in_max, out_min, out_max):
-        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
     def destroy():
         # Stop all pwm channel
         led_val.stop()
         # Release resource
         GPIO.cleanup()
-
     def loop():
         while True:
-            res = ADC0834.getResult()
-            print ('res = %d' % res)
-            R_val = MAP(res, 0, 255, 0, 100)
-            led_val.ChangeDutyCycle(R_val)
+            analogVal = ADC0834.getResult()
+            print ('analog value = %d' % analogVal)
+            led_val.ChangeDutyCycle(analogVal*100/255)
             time.sleep(0.2)
-
     if __name__ == '__main__':
         setup()
         try:
