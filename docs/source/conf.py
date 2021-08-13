@@ -59,7 +59,7 @@ html_js_files = [
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/monokai.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/xterm.js',
     'https://ezblock.cc/readDocFile/readTheDoc/src/js/FitAddon.js',
-    'https://ezblock.cc/readDocFile/readTheDoc/src/js/readTheDocIndex.js',
+    'https://ezblock.cc/readDocFile/readTheDoc/src/js/test.js',
 ]
 html_css_files = [
     'https://ezblock.cc/readDocFile/topHead.css',
